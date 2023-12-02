@@ -15,12 +15,5 @@ namespace StockApp.DataAccess.DataBase
                            CREATE DATABASE StockApp
                         END";
         }
-        internal static class SqlConexao
-        {
-            internal static string StrConexao()
-            {
-                return @"Data Source=.\SQLEXPRESS;Initial Catalog=StockPhone;User ID=sa;Password=sql2022; Trusted_Connection = False; TrustServerCertificate = True;";
-            }
-        }
     }
 }

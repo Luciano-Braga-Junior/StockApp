@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Business\StockApp.Business\StockApp.Business.csproj" />
+    <ProjectReference Include="..\..\DataAccess\StockApp.DataAccess\StockApp.DataAccess.csproj" />
   </ItemGroup>
 
 </Project>

@@ -15,6 +15,7 @@ namespace StockApp.WindowsForms._inicializar
         {
             _databaseService.CriarBanco();
             _databaseService.CriarTabelaCategoria();
+            _databaseService.CriarTabelaSubcategoria();
         }
     }
 }

@@ -17,13 +17,11 @@ namespace StockApp.DataAccess.DataBase
                 using (var conexao = new SqlConnection(SqlConexao.ConexaoSemBanco))
                 {
                     //conexao.Open();
-
                     var resultado = conexao.Execute(sql);
                 }
             }
             catch (Exception)
             {
-
                 throw;
             } 
         } 

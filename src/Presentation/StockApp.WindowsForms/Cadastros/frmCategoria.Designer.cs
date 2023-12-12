@@ -92,6 +92,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(gbCadastrarCategoria);
             Name = "frmCategoria";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "frmCategoria";
             gbCadastrarCategoria.ResumeLayout(false);
             gbCadastrarCategoria.PerformLayout();

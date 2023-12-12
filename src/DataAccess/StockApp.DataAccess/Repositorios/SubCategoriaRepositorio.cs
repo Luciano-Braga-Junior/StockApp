@@ -1,9 +1,14 @@
 ﻿using StockApp.Business.Entidades;
 using StockApp.Business.Interfaces;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace StockApp.DataAccess.Repositorios
 {
-    public class CategoriaRepositorio : ICategoriaRepository
+    public class SubCategoriaRepositorio : ICategoriaRepository
     {
         public bool Ativar(int id)
         {

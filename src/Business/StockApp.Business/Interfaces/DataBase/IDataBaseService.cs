@@ -4,5 +4,6 @@
     {
         void CriarBanco();
         void CriarTabelaCategoria();
+        void CriarTabelaSubcategoria();
     }
 }

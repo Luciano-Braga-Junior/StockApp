@@ -22,7 +22,7 @@ namespace StockApp.WindowsForms.Cadastros
 
             var resultado = _categoriaRepositorio.Incluir(novaCategoria);
 
-            if(resultado)
+            if (resultado)
             {
                 MessageBox.Show("Categoria cadastrada com sucesso");
             }

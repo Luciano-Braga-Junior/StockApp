@@ -15,10 +15,16 @@ namespace StockApp.WindowsForms
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-
-              var banco = new InicializarDatabase();
-              banco.Init();
-
+            try
+            {
+                var banco = new InicializarDatabase();
+                banco.Init();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                throw;
+            }
             Application.Run(new frmCategoria());
         }
     }

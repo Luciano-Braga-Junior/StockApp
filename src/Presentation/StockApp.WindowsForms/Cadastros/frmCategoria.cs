@@ -1,5 +1,6 @@
 ﻿using StockApp.Business.Entidades;
 using StockApp.Business.Interfaces;
+using StockApp.DataAccess.Repositorios;
 
 namespace StockApp.WindowsForms.Cadastros
 {
@@ -9,6 +10,7 @@ namespace StockApp.WindowsForms.Cadastros
         public frmCategoria()
         {
             InitializeComponent();
+            _categoriaRepositorio = new CategoriaRepositorio();
         }
         public frmCategoria(ICategoriaRepository categoriaRepositorio)
         {

@@ -19,16 +19,24 @@ namespace StockApp.DataAccess.DataBase
                                 Nome varchar(100) NOT NULL,
                                 CategoriaId int NOT NULL,
                                 Status bit DEFAULT 1,
-                                DataCriacao date NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                                DataCriacao date NOT NULL,
                                 DataAlteracao date NOT NULL DEFAULT CURRENT_TIMESTAMP,
                                 CONSTRAINT fk_SubCategoria_Categoria
                                 FOREIGN KEY (CategoriaId) REFERENCES Categorias(Id) ON DELETE CASCADE
                             )
                         END";
-            using (var conexao = new SqlConnection(SqlConexao.ConexaoComBanco))
+            try
             {
-                conexao.Open();
-                conexao.Execute(sql);
+                using (var conexao = new SqlConnection(SqlConexao.ConexaoComBanco))
+                {
+                    conexao.Open();
+                    conexao.Execute(sql);
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
         }
     }

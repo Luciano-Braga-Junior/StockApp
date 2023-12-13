@@ -22,10 +22,18 @@ namespace StockApp.DataAccess.DataBase
                                 DataAlteracao date NOT NULL DEFAULT CURRENT_TIMESTAMP
                             );
                         END";
-            using (var conexao = new SqlConnection(SqlConexao.ConexaoComBanco))
+            try
             {
-                conexao.Open();
-                conexao.Execute(sql);
+                using (var conexao = new SqlConnection(SqlConexao.ConexaoComBanco))
+                {
+                    conexao.Open();
+                    conexao.Execute(sql);
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
         }
     }
